@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
 require('dotenv').config();
+const {logWithTimestamp} = require("./utils");
 
 const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
@@ -16,7 +17,7 @@ const transporter = nodemailer.createTransport({
 
 async function sendNotification() {
     if (process.env.EMAIL_USERNAME === 'example@test.com') {
-        console.log('✅ There is now an appointment available: https://service.berlin.de/dienstleistung/351180/');
+        logWithTimestamp('✅ There is now an appointment available: https://service.berlin.de/dienstleistung/351180/');
         return;
     }
 
@@ -29,10 +30,10 @@ async function sendNotification() {
 
     try {
         await transporter.sendMail(mailOptions);
-        console.log('📧 Email sent successfully!');
+        logWithTimestamp('📧 Email sent successfully!');
     } catch (err) {
-        console.error('⚠️ Error sending email:', err);
-        console.log('✅ There is now an appointment available: https://service.berlin.de/dienstleistung/351180/');
+        logWithTimestamp('⚠️ Error sending email:', err);
+        logWithTimestamp('✅ There is now an appointment available: https://service.berlin.de/dienstleistung/351180/');
     }
 }
 
