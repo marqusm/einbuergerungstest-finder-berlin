@@ -1,0 +1,25 @@
+{
+  "name": "einbuergerungstest-berlin-checker",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "einbürgerungstest",
+    "appointment",
+    "termin",
+    "berlin",
+    "checker",
+    "script"
+  ],
+  "author": "Marko Miskovic",
+  "license": "MIT",
+  "description": "A tool to help you checking the official page id there are available test slots.",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "nodemailer": "^7.0.3",
+    "puppeteer": "^24.8.2"
+  }
+}
