@@ -1,8 +1,12 @@
-const puppeteer = require("puppeteer");
+const puppeteer = require('puppeteer-core');
 const {sendNotification} = require("./notifications");
 
 async function checkAppointment() {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({
+        executablePath: '/usr/bin/chromium', // Your own lightweight Chromium
+        headless: true,
+        args: ['--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage']
+    });
     const page = await browser.newPage();
 
     try {

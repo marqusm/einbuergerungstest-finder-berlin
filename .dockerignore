@@ -1,0 +1,12 @@
+node_modules/
+
+npm-debug.log
+.env
+.env.template
+Dockerfile
+docker-compose.yml
+
+LICENSE
+README.md
+
+.idea/

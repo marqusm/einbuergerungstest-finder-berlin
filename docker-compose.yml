@@ -1,0 +1,15 @@
+services:
+  einbuergerungstest-berlin-checker:
+    container_name: einbuergerungstest-berlin-checker
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - CHECKING_INTERVAL=3
+      - EMAIL_PROVIDER=EmailProviderName
+      - EMAIL_HOST=EmailProviderHost
+      - EMAIL_PORT=587
+      - EMAIL_USERNAME=example@test.com
+      - EMAIL_PASSWORD=t0pS3cR3t
+      - SEND_TO_EMAIL=myemail@test.com
