@@ -25,8 +25,10 @@ async function checkAppointment() {
 
         if (responsePageB.status() === 403) {
             logWithTimestamp('❌ Forbidden access (Suspicious network, malware scanning, intrusion attempt, ...).');
-        } else if (contentPageB.includes('Leider sind aktuell keine Termine für ihre Auswahl verfügbar.')) {
-            logWithTimestamp('❌ No appointment available.');
+        } else if (contentPageB.includes('Leider sind aktuell keine Termine für ihre Auswahl verfügbar')) {
+            logWithTimestamp('❌ No appointment available');
+        } else if (contentPageB.includes('Die Terminverwaltung wird momentan gewartet')) {
+            logWithTimestamp('️⚠️ Maintenance');
         } else {
             await sendNotification();
         }
