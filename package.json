@@ -18,8 +18,10 @@
   "license": "MIT",
   "description": "A tool to help you checking the official page id there are available test slots.",
   "dependencies": {
+    "axios": "^1.9.0",
+    "axios-cookiejar-support": "^6.0.2",
     "dotenv": "^16.5.0",
     "nodemailer": "^7.0.3",
-    "puppeteer": "^24.8.2"
+    "tough-cookie": "^5.1.2"
   }
 }
