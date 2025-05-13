@@ -1,8 +1,5 @@
 FROM node:24-alpine
 
-RUN apk update && apk add --no-cache \
-    chromium
-
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
