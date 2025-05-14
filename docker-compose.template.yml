@@ -1,6 +1,6 @@
 services:
-  einbuergerungstest-berlin-checker:
-    container_name: einbuergerungstest-berlin-checker
+  einbuergerungstest-finder-berlin:
+    container_name: einbtest-finder
     restart: unless-stopped
     build:
       context: .
