@@ -25,34 +25,7 @@ This small script app is intended to help people finding an available slot for E
 
 ### Docker
 
-1. Checkout the project locally
-2. Copy `.env.template` file to `.env`
-    ``` Shell
-    cp .env.template .env
-    ```
-3. Enter correct values to the `.env` file. If you skip Email part or email sending fails, you'll get a message locally in the logs.
-4. Build Docker image
-    ``` Shell
-    docker build -t einbuergerungstest-finder-berlin .
-    ```
-5. Run Docker container from the created image
-    ``` Shell
-    docker run --env-file .env einbuergerungstest-finder-berlin
-    ```
-
-
-### Docker Compose
-
-1. Checkout the project locally
-2. Copy `docker-compose.template.yml` file `docker-compose.yml`
-   ``` Shell
-   cp docker-compose.template.yml docker-compose.yml
-   ```
-3. Enter correct values to the docker-compose.yml file. If you skip Email part or email sending fails, you'll get a message locally in the logs.
-4. Run Docker Compose
-   ``` Shell
-    docker compose up -d
-   ```
+Refer to [Docker Readme](README_DOCKER.md).
 
 
 ## Happy testing
