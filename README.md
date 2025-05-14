@@ -1,4 +1,4 @@
-# einbuergerungstest-berlin-checker
+# einbuergerungstest-finder-berlin
 
 This small script app is intended to help people finding an available slot for Einbürgerungstest in Berlin. Since usually there are no slots, idea is to run this script to help you find one.
 
@@ -33,11 +33,11 @@ This small script app is intended to help people finding an available slot for E
 3. Enter correct values to the `.env` file. If you skip Email part or email sending fails, you'll get a message locally in the logs.
 4. Build Docker image
     ``` Shell
-    docker build -t einbuergerungstest-berlin-checker .
+    docker build -t einbuergerungstest-finder-berlin .
     ```
 5. Run Docker container from the created image
     ``` Shell
-    docker run --env-file .env einbuergerungstest-berlin-checker
+    docker run --env-file .env einbuergerungstest-finder-berlin
     ```
 
 

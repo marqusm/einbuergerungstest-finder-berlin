@@ -1,5 +1,5 @@
 {
-  "name": "einbuergerungstest-berlin-checker",
+  "name": "einbuergerungstest-finder-berlin",
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
@@ -11,12 +11,14 @@
     "appointment",
     "termin",
     "berlin",
+    "finder",
     "checker",
-    "script"
+    "script",
+    "tool"
   ],
   "author": "Marko Miskovic",
   "license": "MIT",
-  "description": "A tool to help you checking the official page id there are available test slots.",
+  "description": "A tool to help you checking the official page if there are available test slots.",
   "dependencies": {
     "axios": "^1.9.0",
     "axios-cookiejar-support": "^6.0.2",
